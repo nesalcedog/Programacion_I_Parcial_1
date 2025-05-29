@@ -43,14 +43,14 @@ def porcentaje_aprobados(matriz:list):
     y calcula el porcentaje de examenes aprobados
     '''    
     for i in range(len(matriz)):
-        notas_aprobadas_alumno = 0 #Creo la variable para sumar la nota de los alumnos aprobados
+        examenes_aprobados = 0 #Creo la variable para sumar la nota de los alumnos aprobados
         examenes_realizados = 0 #Variable de examenes totales
         for j in range(len(matriz[i])):
             examenes_realizados += 1
             if matriz[i][j] >= 6: #Solo sumo las notas aprobadas
-                notas_aprobadas_alumno += matriz[i][j]
+                examenes_aprobados += 1
         
-        porcentaje_aprobado = (notas_aprobadas_alumno / examenes_realizados) 
+        porcentaje_aprobado = (examenes_aprobados / examenes_realizados) *100
         print(f'El porcentaje de aprobacion del alumno {i+1} es {porcentaje_aprobado} %')
 
 
